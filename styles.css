@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #151515;
+  font-family: "Rokkitt", serif;
+}
+
+body .upper-name {
+  background-color: #262626;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 100px 100px 25px 100px;
+  height: 25%;
+  font-size: 36px;
+  text-align: center;
+}
+
+body .upper-name .name {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+body .upper-name .name .letter {
+  margin: auto;
+}
+
+body .upper-name .name .purple-1 {
+  color: #8855ff;
+}
+
+body .upper-name .name .purple-2 {
+  color: #573d92;
+}
+
+body .upper-name .name .purple-3 {
+  color: #ccaaff;
+}
+
+body .upper-name .name .white {
+  color: #ffffff;
+}
+
+body .content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 100px;
+  height: 25%;
+  font-size: 25px;
+}
+
+body .content .info {
+  padding-top: 10px;
+  background-color: #262626;
+  border-radius: 12px;
+}
+
+body .content .orange {
+  color: #aa6954;
+}
+
+body .content .blue {
+  color: #aaddff;
+}
+
+body .content .gold {
+  color: #d2a956;
+}
+
+body .content .grey {
+  color: #8d8d8d;
+}
+
+body .content .purple {
+  color: #a277dc;
+}
+
+body .content .info-content {
+  color: #d7b5ff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: left;
+  margin: auto;
+  width: 70%;
+}
+
+body .link-no-style {
+  color: #d7b5ff;
+}
+
+body .image-center {
+  text-align: center;
+  display: block;
+}
+
+body .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .icons .cta-icon {
+  width: 200px;
+  height: 200px;
+}
+
+@media (min-width: 1920px) {
+  .letter {
+    font-size: 35px;
+  }
+  .content {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 760px) {
+  .letter {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 486px) {
+  .letter {
+    font-size: 20px;
+  }
+  .content {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
