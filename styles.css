@@ -5,7 +5,6 @@
 }
 
 body {
-  background-image: url("./stars.jpg");
   font-family: "Rokkitt", serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +18,70 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url("./stars.jpg");
+  color: #eee;
+  width: 100%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-animation: animation 100s linear infinite;
+          animation: animation 100s linear infinite;
+}
+
+body .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  margin: auto;
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 200%;
+  /* Full height */
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Modal Content/Box */
+  /* The Close Button */
+}
+
+body .modal .modal-content {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #07050a;
+  background: radial-gradient(circle, #1a183d 0%, #07050a 100%);
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid #ffffff;
+  width: 40%;
+  /* Could be more or less, depending on screen size */
+  color: #c4a5eb;
+  border-radius: 12px;
+}
+
+body .modal .modal-content a {
+  color: #aa6954;
+}
+
+body .modal .close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+body .modal .close:hover,
+body .modal .close:focus {
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 body .upper-name {
@@ -29,7 +92,7 @@ body .upper-name {
   border-radius: 90px;
   width: 80%;
   height: 25%;
-  margin: 50px auto auto auto;
+  margin: 50px auto 100px auto;
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -108,20 +171,45 @@ body .content .info .copyright {
   text-align: center;
 }
 
+body .content .info .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .content .info .projects .project {
+  padding: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .content .info .projects .project .project-image {
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  opacity: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+}
+
+body .content .info .projects .project .project-image:hover,
+body .content .info .projects .project .project-image:focus {
+  opacity: 70%;
+  cursor: pointer;
+}
+
 body .content .orange {
   color: #aa6954;
-}
-
-body .content .blue {
-  color: #aaddff;
-}
-
-body .content .gold {
-  color: #d2a956;
-}
-
-body .content .grey {
-  color: #8d8d8d;
 }
 
 body .content .purple {
@@ -149,14 +237,29 @@ body .icons {
 }
 
 body .icons .cta-icon {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   padding: 20px;
+}
+
+@-webkit-keyframes animation {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@keyframes animation {
+  100% {
+    background-position: 0px -3000px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   body .upper-name {
     font-size: 25px;
+  }
+  body .modal .modal-content {
+    width: 80%;
   }
   body .content {
     font-size: 15px;
@@ -164,20 +267,13 @@ body .icons .cta-icon {
   body .content .info {
     padding: 15px;
   }
-  body .content .info .icons {
-    text-align: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  body .content .info .projects .project .project-image {
+    width: 200px;
+    height: 150px;
   }
   body .content .info .icons .cta-icon {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     padding: 20px;
   }
   body .content .info .info-content {
