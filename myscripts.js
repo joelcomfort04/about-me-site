@@ -32,6 +32,11 @@ projects.push({
   image: document.getElementById("infinite-image"),
 });
 
+projects.push({
+  modal: document.getElementById("weather-modal"),
+  image: document.getElementById("weather-image"),
+});
+
 // Get the <span> elements and their parents
 document.querySelectorAll(".close").forEach((item) => {
   item.addEventListener("click", (event) => {
